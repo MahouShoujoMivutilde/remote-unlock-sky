@@ -1,0 +1,40 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system>                                 <dir>           <type>          <options>       <dump> <pass>
+
+# /dev/sdb2
+# UUID=cbaa6041-e397-4fb0-844b-00daf0519260	/         	ext4      	rw,relatime	0 1
+
+# /dev/sdb3
+# UUID=ca9ba1fd-ed60-448f-8b67-7c1ef3dd4055	/home     	ext4      	rw,relatime	0 2
+
+# UUID=d4f9de00-54a3-4fe4-8984-8dd7e9cfca29	/mnt/500gb	ext4      	defaults,nodev,nosuid,noexec	0 2
+
+# UUID=faa60cd5-6d79-4492-8808-d7d59ed88f67	/mnt/4tb	ext4      	defaults,nodev,nosuid,noexec	0 2
+
+# /dev/sdb1
+# UUID=4B91-3EA0      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+
+
+# XXX NEW XXX
+
+# /swapfile           	none      	swap      	defaults  	0 0
+
+#UUID=6e4e7226-c30e-4d09-9914-c9ff5fc90614	
+
+
+/dev/mapper/crypt-root /         	ext4      	rw,relatime	0 1
+
+
+
+/dev/mapper/home /home     	ext4      	rw,relatime	0 2
+
+# /dev/sda1
+UUID=4B91-3EA0      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/mapper/crypt-500gb /mnt/500gb	ext4      	rw,relatime	0 2
+
+# /dev/mapper/crypt-4tb 	/mnt/4tb  	ext4      	rw,relatime	0 2
+
+# /home/sky/music         /docker/pms/media/music    none bind,nofail 0 0

@@ -1,0 +1,17 @@
+# Configuration for encrypted block devices.
+# See crypttab(5) for details.
+
+# NOTE: Do not list your root (/) partition here, it must be set up
+#       beforehand by the initramfs (/etc/mkinitcpio.conf).
+
+# <name>       <device>                                     <password>              <options>
+# home         UUID=b8ad5c18-f445-495d-9095-c9ec4f9d2f37    /etc/mypassword1
+# data1        /dev/sda3                                    /etc/mypassword2
+# data2        /dev/sda5                                    /etc/cryptfs.key
+# swap         /dev/sdx4                                    /dev/urandom            swap,cipher=aes-cbc-essiv:sha256,size=256
+# vol          /dev/sdb7                                    none
+
+# crypt-root UUID=6efa5715-2715-4c8a-ac08-bf462be74261
+# crypt-4tb      UUID=38cefd7c-4e7f-490b-8a98-f6cd266759df   /etc/luks-stuff/4tb.key
+# crypt-500gb    UUID=fdeb2214-bc43-4bad-8a09-a96256c7e9a1   /etc/luks-stuff/500gb.key
+home UUID=1177ef45-5335-4d69-89ee-a3a9f2cb8125 /etc/luks-stuff/lvm-ssd.key
